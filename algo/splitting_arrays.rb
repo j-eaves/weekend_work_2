@@ -1,7 +1,17 @@
 # Complete the method called split_array, which two parameters, the first being an array, and the second being an integer. The method will then create an array of other arrays, each one being the size of the indicated by the second parameter. See the driver code for examples.
 
 def split_array(array, array_size)
-
+  new_array = []#create an empty array
+  index = 0 #start the index at 0
+  until index == array.length #do this until my index number = array.length
+    mini_array = [] #create an empty array
+    array_size.times do #add a number of array elements = to the value of array_size
+      mini_array << array[index]
+      index += 1 #add one to the index
+    end
+    new_array << mini_array #add the mini array to the new array
+  end
+  return new_array #return the new_array after it's all done
 end
 
 # Driver code - don't touch anything below this line.

@@ -4,6 +4,26 @@
 # The class should also have an winter_season method that increases the rings attribute by 1.
 # Hint: remember that with object oriented programming the object holds values in the attributes to describe it's current state. Even when we aren't reading it's attributes, they should be up to date.
 
+class Tree
+  attr_reader :rings
+  def initialize
+    @rings = 0
+  end
+  def winter_season
+    #Add a ring for each winter season that passes
+    @rings = @rings + 1
+  end
+  def bear_fruit?
+    #if the tree has > 7 rings and < 15 rings, it bears fruit
+    ans = false
+    if (@rings > 7) and (@rings < 15)
+      ans = true
+    else
+      ans = false
+    end
+    return ans
+  end
+end
 
 # Driver code - don't touch anything below this line.
 puts "TESTING the Tree class..."

@@ -9,9 +9,20 @@
 # constructor accordingly.
 
 class Yodel
-
+  attr_reader :segment, :count
+  def initialize(input_options) #the input is a hash
+    @segment = input_options[:segment]
+    @count = input_options[:count]
+  end
+  def articulate
+    #concatinate the segment @count times
+    yodelstring = ""
+    count.times do
+      yodelstring += segment
+    end
+    return yodelstring
+  end
 end
-
 
 # Driver code - don't touch anything below this line.
 puts "TESTING the Yodel class..."
